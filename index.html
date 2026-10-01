@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Boyfriend Day 💌</title>
+  <meta name="description" content="A personal romantic surprise website — a digital love letter made just for you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating hearts background -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Sparkle cursor trail -->
+  <div id="sparkleContainer"></div>
+
+  <!-- Music button -->
+  <button class="music-btn" id="musicBtn" title="Play/Pause music">
+    <span class="music-icon" id="musicIcon">♪</span>
+    <span class="music-label">music</span>
+  </button>
+  <!-- Pretty Little Baby — YouTube IFrame Player API container -->
+  <div id="ytPlayerContainer" style="position:fixed;bottom:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;pointer-events:none;" aria-hidden="true"></div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- SECTION 1 · HERO -->
+  <!-- ─────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-decoration">
+      <span class="deco-star">✦</span>
+      <span class="deco-flower">✿</span>
+      <span class="deco-heart">♡</span>
+      <span class="deco-star right">✦</span>
+      <span class="deco-flower right">✿</span>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">✦ today is all about you ✦</p>
+      <h1 class="hero-title">Happy Boyfriend Day,<br /><em>My Favorite Person</em> ♡</h1>
+      <p class="hero-subtitle">A tiny website for the person who makes my ordinary days feel special.</p>
+      <div class="hero-divider">
+        <span>♡</span><span>♡</span><span>♡</span>
+      </div>
+      <a href="#reasons" class="btn-primary" id="openSurpriseBtn">Open Your Surprise 💌</a>
+    </div>
+
+    <div class="hero-petals">
+      <span>🌸</span><span>🌸</span><span>🌸</span>
+      <span>🌸</span><span>🌸</span>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- SECTION 2 · REASONS I LOVE YOU -->
+  <!-- ─────────────────────────────────────────── -->
+  <section class="section reasons-section" id="reasons">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">from my heart to yours</p>
+        <h2 class="section-title">A Few Reasons Why I Love You</h2>
+        <p class="section-sub">There are so many more, but here are a few to start ♡</p>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="reason-card" data-delay="0">
+          <div class="reason-icon">😊</div>
+          <h3>Your Smile</h3>
+          <p>The way you smile — honestly, it just makes everything better.</p>
+        </div>
+        <div class="reason-card" data-delay="100">
+          <div class="reason-icon">🎶</div>
+          <h3>Your Voice</h3>
+          <p>I could listen to you talk for hours and never get bored.</p>
+        </div>
+        <div class="reason-card" data-delay="200">
+          <div class="reason-icon">🤍</div>
+          <h3>The Way You Care</h3>
+          <p>You care so deeply in the most gentle and thoughtful ways.</p>
+        </div>
+        <div class="reason-card" data-delay="300">
+          <div class="reason-icon">🤪</div>
+          <h3>Your Silly Side</h3>
+          <p>You're so wonderfully weird and I absolutely love it.</p>
+        </div>
+        <div class="reason-card" data-delay="400">
+          <div class="reason-icon">😂</div>
+          <h3>The Way You Make Me Laugh</h3>
+          <p>No one makes me laugh quite like you do.</p>
+        </div>
+        <div class="reason-card" data-delay="500">
+          <div class="reason-icon">✨</div>
+          <h3>Simply… You ♡</h3>
+          <p>You don't need a reason. You just being you is enough.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- SECTION 3 · MEMORIES GALLERY -->
+  <!-- ─────────────────────────────────────────── -->
+  <section class="section gallery-section" id="memories">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">captured in time</p>
+        <h2 class="section-title">Our Little Memories</h2>
+        <p class="section-sub">Every photo tells a story. These are some of my favorites ♡</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!--
+          HOW TO ADD YOUR PHOTOS:
+          Replace the src="" in each <img> below with your own photo paths.
+          Example: src="photos/us-at-the-park.jpg"
+          You can also edit the caption text inside each <p class="photo-caption">.
+        -->
+        <div class="photo-card" data-delay="0">
+          <div class="photo-frame">
+            <img src="photos/photo1.jpg" alt="That romantic moment" class="gallery-photo" onerror="this.parentElement.classList.add('no-photo')" />
+            <div class="photo-overlay">
+              <span class="photo-heart">♡</span>
+            </div>
+          </div>
+          <p class="photo-caption">That one moment I'll never forget ♡</p>
+        </div>
+
+        <div class="photo-card" data-delay="100">
+          <div class="photo-frame">
+            <img src="photos/photo2.jpg" alt="Us together" class="gallery-photo" onerror="this.parentElement.classList.add('no-photo')" />
+            <div class="photo-overlay">
+              <span class="photo-heart">♡</span>
+            </div>
+          </div>
+          <p class="photo-caption">Us being us, always ♡</p>
+        </div>
+
+        <div class="photo-card" data-delay="200">
+          <div class="photo-frame">
+            <img src="photos/photo3.jpg" alt="My favorite picture" class="gallery-photo" onerror="this.parentElement.classList.add('no-photo')" />
+            <div class="photo-overlay">
+              <span class="photo-heart">♡</span>
+            </div>
+          </div>
+          <p class="photo-caption">My favorite picture of us ♡</p>
+        </div>
+
+        <div class="photo-card" data-delay="300">
+          <div class="photo-frame">
+            <img src="photos/photo4.jpg" alt="Happiest day" class="gallery-photo" onerror="this.parentElement.classList.add('no-photo')" />
+            <div class="photo-overlay">
+              <span class="photo-heart">♡</span>
+            </div>
+          </div>
+          <p class="photo-caption">One of my happiest days ♡</p>
+        </div>
+
+        <div class="photo-card" data-delay="400">
+          <div class="photo-frame">
+            <img src="photos/photo5.jpg" alt="Us in our world" class="gallery-photo" onerror="this.parentElement.classList.add('no-photo')" />
+            <div class="photo-overlay">
+              <span class="photo-heart">♡</span>
+            </div>
+          </div>
+          <p class="photo-caption">Our little world ♡</p>
+        </div>
+
+        <div class="photo-card" data-delay="500">
+          <div class="photo-frame">
+            <img src="photos/photo1.jpg" alt="Us again" class="gallery-photo" onerror="this.parentElement.classList.add('no-photo')" />
+            <div class="photo-overlay">
+              <span class="photo-heart">♡</span>
+            </div>
+          </div>
+          <p class="photo-caption">Every moment with you is special ♡</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- SECTION 4 · THINGS I NEVER SAY ENOUGH -->
+  <!-- ─────────────────────────────────────────── -->
+  <section class="section things-section" id="things">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">things I should say more often</p>
+        <h2 class="section-title">Things I Never Say Enough</h2>
+        <p class="section-sub">Tap each card ♡</p>
+      </div>
+
+      <div class="things-grid">
+        <div class="thing-card" data-delay="0">
+          <div class="thing-inner">
+            <span class="thing-icon">🛡️</span>
+            <p>"You make me feel safe."</p>
+          </div>
+        </div>
+        <div class="thing-card" data-delay="100">
+          <div class="thing-inner">
+            <span class="thing-icon">🌈</span>
+            <p>"You make boring days fun."</p>
+          </div>
+        </div>
+        <div class="thing-card" data-delay="200">
+          <div class="thing-inner">
+            <span class="thing-icon">💬</span>
+            <p>"I love talking to you about absolutely nothing."</p>
+          </div>
+        </div>
+        <div class="thing-card" data-delay="300">
+          <div class="thing-inner">
+            <span class="thing-icon">☀️</span>
+            <p>"You are one of my favorite parts of every day."</p>
+          </div>
+        </div>
+        <div class="thing-card" data-delay="400">
+          <div class="thing-inner">
+            <span class="thing-icon">🌸</span>
+            <p>"Thank you for being you."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- SECTION 5 · TIMELINE -->
+  <!-- ─────────────────────────────────────────── -->
+  <section class="section timeline-section" id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">our story</p>
+        <h2 class="section-title">Our Little Timeline</h2>
+        <p class="section-sub">Every chapter is my favorite ♡</p>
+      </div>
+
+      <div class="timeline">
+        <!--
+          HOW TO EDIT THE TIMELINE:
+          Change the date inside <span class="tl-date"> and the text inside <p class="tl-text">
+        -->
+        <div class="tl-item" data-delay="0">
+          <div class="tl-dot">♡</div>
+          <div class="tl-card">
+            <span class="tl-date">The Beginning</span>
+            <h3 class="tl-title">The beginning</h3>
+            <p class="tl-text">Where our story started. I didn't know then how much this would mean to me.</p>
+          </div>
+        </div>
+
+        <div class="tl-item" data-delay="150">
+          <div class="tl-dot">♡</div>
+          <div class="tl-card">
+            <span class="tl-date">Early Days</span>
+            <h3 class="tl-title">Our first proper conversation</h3>
+            <p class="tl-text">That conversation that went on forever and left me smiling for days.</p>
+          </div>
+        </div>
+
+        <div class="tl-item" data-delay="300">
+          <div class="tl-dot">♡</div>
+          <div class="tl-card">
+            <span class="tl-date">A Funny Memory</span>
+            <h3 class="tl-title">Our funniest memory</h3>
+            <p class="tl-text">I still laugh every single time I think about this. Only we would find this funny.</p>
+          </div>
+        </div>
+
+        <div class="tl-item" data-delay="450">
+          <div class="tl-dot">♡</div>
+          <div class="tl-card">
+            <span class="tl-date">A Day I'll Keep</span>
+            <h3 class="tl-title">A day I'll always remember</h3>
+            <p class="tl-text">There are days that just stay with you. This was one of them.</p>
+          </div>
+        </div>
+
+        <div class="tl-item" data-delay="600">
+          <div class="tl-dot special">♡</div>
+          <div class="tl-card special">
+            <span class="tl-date">October 3rd</span>
+            <h3 class="tl-title">Today — Boyfriend Day ✨</h3>
+            <p class="tl-text">And here we are. Right now. Today is for you, my favorite person.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- SECTION 6 · LETTER -->
+  <!-- ─────────────────────────────────────────── -->
+  <section class="section letter-section" id="letter">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">just for you</p>
+        <h2 class="section-title">A Letter For You 💌</h2>
+        <p class="section-sub">I wrote this with a lot of love ♡</p>
+      </div>
+
+      <div class="envelope-wrapper">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap" id="envelopeFlap"></div>
+          <div class="envelope-body">
+            <div class="envelope-seal" id="envelopeSeal">♡</div>
+            <p class="envelope-hint">click to open</p>
+          </div>
+        </div>
+
+        <div class="letter-content" id="letterContent">
+          <div class="letter-paper">
+            <div class="letter-decoration">✦ ♡ ✦</div>
+            <!--
+              HOW TO EDIT THE LETTER:
+              Just change the text between the <p> tags below.
+            -->
+            <p class="letter-greeting">To my favorite person,</p>
+            <p class="letter-body">
+              I don't think I say it enough, but I'm really grateful that you're in my life.
+            </p>
+            <p class="letter-body">
+              Thank you for all the little things — the laughs, the conversations, the annoying moments, and all the memories we've made.
+            </p>
+            <p class="letter-body">
+              You have a way of making ordinary moments feel special.
+            </p>
+            <p class="letter-body">
+              Happy Boyfriend Day, love.
+            </p>
+            <p class="letter-closing">
+              Here's to more memories, more laughs and more us. ♡
+            </p>
+            <div class="letter-signature">With all my love 🌸</div>
+          </div>
+        </div>
+
+        <button class="btn-primary letter-btn" id="openLetterBtn">Open My Letter ✉️</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- SECTION 7 · ONE LAST THING -->
+  <!-- ─────────────────────────────────────────── -->
+  <section class="section final-section" id="final">
+    <div class="container">
+      <div class="big-heart-wrapper">
+        <div class="big-heart" id="bigHeart">♡</div>
+        <div class="heart-glow"></div>
+      </div>
+
+      <div class="final-text">
+        <h2 class="final-title">
+          "If I had to choose my favorite person all over again…
+        </h2>
+        <p class="final-subtitle">I'd still choose you. ♡"</p>
+      </div>
+
+      <button class="btn-primary surprise-btn" id="surpriseBtn">One More Surprise ✨</button>
+
+      <div class="surprise-reveal" id="surpriseReveal">
+        <div class="surprise-card">
+          <p class="surprise-text">Okay fine… I love you more than I can fit into this little website. 🥹💗</p>
+          <div class="surprise-hearts">♡ ♡ ♡</div>
+        </div>
+      </div>
+
+      <p class="made-for-you">Made just for you ♡</p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- FOOTER -->
+  <!-- ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-hearts">
+      <span>♡</span><span>♡</span><span>♡</span>
+    </div>
+    <p class="footer-main">Made with way too much love ♡</p>
+    <p class="footer-sub">Happy Boyfriend Day 💌</p>
+    <div class="footer-deco">✦ ✿ ✦</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- YouTube IFrame Player API — loaded AFTER script.js so the callback is ready -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
